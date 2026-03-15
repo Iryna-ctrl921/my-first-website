@@ -6,41 +6,59 @@
     <title>Головна сторінка</title>
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="pages/about.html">Про кафедру</a></li>
-            <li><a href="pages/contacts.html">Контакти</a></li>
-            <li><a href="pages/services.html">Послуги</a></li>
-        </ul>
-    </nav>
-</header>
 
-<main>
-    <section class="hero">
-        <h1>Вітаємо у моїй галереї!</h1>
-    </section>
-<section class="about">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="pages/about.html">Про кафедру</a></li>
+                <li><a href="pages/contacts.html">Контакти</a></li>
+                <li><a href="pages/services.html">Послуги</a></li>
+                <li><a href="pages/blog.html">Блог</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Вітаємо у моїй галереї!</h1>
+            <img src="images/Кіт.jpg" alt="Головний котик" width="400">
+        </section>
+
+        <section class="about">
+            <h2>Про проект</h2>
+            <p>Наша <strong>мета</strong> — вивчення основ семантичної верстки.</p>
+        </section>
+
+        <section class="about">
     <h2>Про проект</h2>
     <p>
-        Наша <strong>мета</strong> — підготовка кваліфікованих 
-        фахівців у галузі <em>інформаційних технологій</em>.
+        Моя мета — опанувати <mark>сучасні стандарти HTML5</mark> для створення якісних вебсайтів.
     </p>
-    <p>
-        Сьогодні я опановую базові теги HTML та структурування контенту 
-        для своєї <span style="color: blue;">другої лабораторної</span>.
-    </p>
-</section>
-<section class="gallery">
-        <h2>Галерея зображень</h2>
-        <div class="gallery-container">
-            <img src="images/Кіт.jpg" alt="Сірий котик" width="250">
-            <img src="images/Kit.jpg" alt="Біленька кішка у рожевій шубці" width="250">
-            <img src="images/Cat.jpg" alt="Два милі котики" width="250">
-        </div>
+
+    <details>
+        <summary>Натисніть, щоб побачити етапи розробки</summary>
+        <ul>
+            <li>Створення структури проекту</li>
+            <li>Наповнення контентом та галереєю</li>
+            <li>Публікація на GitHub Pages</li>
+        </ul>
+    </details>
     </section>
-</main><footer></footer>
+
+        <section class="gallery">
+            <h2>Галерея котиків</h2>
+            <div class="gallery-container">
+                <img src="images/Кіт.jpg" alt="Сірий котик" width="250">
+                <img src="images/Kit.jpg" alt="Біла кішка" width="250">
+                <img src="images/Cat.jpg" alt="Два котики" width="250">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 </p>
+    </footer>
 
 </body>
 </html>
