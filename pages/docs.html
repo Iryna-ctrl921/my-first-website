@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документація — Лабораторна робота №3</title>
+</head>
+<body>
+
+<header>
+    <h1>Технічна документація проекту</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="about.html">Про кафедру</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="docs.html">Документація</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Посібник з використання семантичних тегів</h2>
+        <p>У цьому розділі наведено основні правила використання нових елементів HTML5.</p>
+
+        <details>
+            <summary><strong>Як правильно структурувати сторінку?</strong></summary>
+            <p>Кожна сторінка повинна мати один тег <code>&lt;main&gt;</code>, який містить основний зміст. Для логічних розділів використовуйте <code>&lt;section&gt;</code>.</p>
+        </pre>
+        </details>
+
+        <details>
+            <summary><strong>Як додавати приклади коду?</strong></summary>
+            <p>Для коротких вставок використовуйте тег <code>&lt;code&gt;</code>. Наприклад: <code>const x = 10;</code>.</p>
+            <p>Якщо потрібно вивести багаторядковий код, використовуйте комбінацію <code>&lt;pre&gt;</code> та <code>&lt;code&gt;</code>:</p>
+            <pre>
+<code>
+&lt;article&gt;
+  &lt;h2&gt;Заголовок статті&lt;/h2&gt;
+&lt;/article&gt;
+</code>
+            </pre>
+        </details>
+
+        <details>
+            <summary><strong>Робота з медіа-контентом</strong></summary>
+            <p>Для зображень з підписами ми використовуємо структуру:</p>
+            <code>&lt;figure&gt; + &lt;img&gt; + &lt;figcaption&gt;</code>
+        </details>
+    </section>
+</main>
+
+<footer>
+    <p>&copy;Документацію підготувала Ірина</p>
+</footer>
+
+</body>
+</html>
