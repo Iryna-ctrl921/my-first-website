@@ -256,6 +256,66 @@
         </tbody>
     </table>
 </section>
+<section class="registration-section">
+    <h2>Реєстрація студента</h2>
+    
+    <form action="/register" method="POST">
+        <fieldset>
+    <legend>Персональні дані</legend>
+
+    <div>
+        <label for="lastname">Прізвище:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Введіть прізвище" required>
+    </div>
+
+    <div>
+        <label for="email">Електронна пошта:</label>
+        <input type="email" id="email" name="email" placeholder="example@nure.ua" required>
+    </div>
+
+    <div>
+        <label for="pwd">Пароль (мінімум 8 символів):</label>
+        <input type="password" id="pwd" name="pwd" minlength="8" required>
+    </div>
+    <div>
+    <label for="dob">Дата народження:</label>
+    <input type="date" id="dob" name="dob" required>
+</div>
+
+<fieldset>
+    <legend>Стать:</legend>
+    <input type="radio" id="gender_m" name="gender" value="male" required>
+    <label for="gender_m">Чоловіча</label>
+    
+    <input type="radio" id="gender_f" name="gender" value="female">
+    <label for="gender_f">Жіноча</label>
+</fieldset>
+
+<div>
+    <label for="faculty">Факультет:</label>
+    <select id="faculty" name="faculty" required>
+        <option value="">-- Оберіть факультет --</option>
+        <option value="kn">Комп'ютерні науки</option>
+        <option value="ipz">Інженерія програмного забезпечення</option>
+        <option value="cit">Комп'ютерні інженерія та управління</option>
+    </select>
+</div>
+<div>
+    <label for="bio">Додаткова інформація:</label><br>
+    <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Розкажіть про свої очікування від навчання..."></textarea>
+</div>
+
+<div>
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">Я даю згоду на обробку персональних даних</label>
+</div>
+<div>
+    <button type="submit">Зареєструватися</button>
+    <button type="reset">Очистити форму</button>
+</div>
+</fieldset>
+        </form>
+</section>
 
         <section class="gallery">
             <h2>Галерея котиків</h2>
