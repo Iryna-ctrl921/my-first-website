@@ -51,6 +51,41 @@
         <h2>Наш логотип</h2>
         <img src="../images/logo.png" alt="Логотип інституту" width="400">
     </section>
+    <section class="feedback-section">
+    <h2>Зворотний зв’язок</h2>
+    
+    <form action="/send-feedback" method="POST">
+        <div>
+            <label for="full-name">Повне ім'я (ПІБ):</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Іванов Іван Іванович" required>
+        </div>
+
+        <div>
+            <label for="subject">Тема звернення:</label>
+            <select id="subject" name="subject" required>
+                <option value="">-- Оберіть тему --</option>
+                <option value="support">Технічна підтримка</option>
+                <option value="billing">Питання оплати</option>
+                <option value="feedback">Відгуки та пропозиції</option>
+                <option value="other">Інше</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="tel">Контактний номер телефону:</label>
+            <input type="tel" id="tel" name="tel" placeholder="+380 (__) ___-__-__" required>
+        </div>
+
+        <div>
+            <label for="message">Ваше повідомлення:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="Напишіть ваше питання тут..." required></textarea>
+        </div>
+
+        <div style="margin-top: 15px;">
+            <button type="submit">Надіслати повідомлення</button>
+        </div>
+    </form>
+</section>
 </main>
 
 <footer>

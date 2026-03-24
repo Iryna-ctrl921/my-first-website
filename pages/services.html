@@ -43,6 +43,61 @@
 &lt;/ul&gt;
     </pre>
     </section>
+    <section class="pc-constructor">
+    <h2>Кастомне збирання вашого ПК</h2>
+    <form action="/build-pc" method="POST">
+        
+        <fieldset>
+            <legend>Основні компоненти</legend>
+            <div>
+                <label for="cpu">Процесор:</label>
+                <select id="cpu" name="cpu" required>
+                    <option value="">-- Оберіть процесор --</option>
+                    <option value="i5">Intel Core i5-13600K</option>
+                    <option value="i7">Intel Core i7-14700K</option>
+                    <option value="r5">AMD Ryzen 5 7600X</option>
+                    <option value="r7">AMD Ryzen 7 7800X3D</option>
+                </select>
+            </div>
+
+            <div style="margin-top: 10px;">
+                <label for="gpu">Відеокарта:</label>
+                <select id="gpu" name="gpu" required>
+                    <option value="">-- Оберіть відеокарту --</option>
+                    <option value="rtx4060">NVIDIA RTX 4060</option>
+                    <option value="rtx4070">NVIDIA RTX 4070 Super</option>
+                    <option value="rx7800">AMD Radeon RX 7800 XT</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset style="margin-top: 15px;">
+            <legend>Додаткові опції та аксесуари</legend>
+            <div>
+                <input type="checkbox" id="cooler" name="addons" value="extra_cooler">
+                <label for="cooler">Додатковий кулер для корпусу</label>
+            </div>
+            <div>
+                <input type="checkbox" id="rgb" name="addons" value="rgb_lighting">
+                <label for="rgb">RGB підсвітка (керована)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="wifi" name="addons" value="wifi_card">
+                <label for="wifi">Wi-Fi / Bluetooth модуль</label>
+            </div>
+        </fieldset>
+
+        <div style="margin-top: 15px;">
+            <label for="case-color">Базовий колір корпусу:</label>
+            <input type="color" id="case-color" name="case-color" value="#000000">
+            <small>(Натисніть на колір, щоб змінити)</small>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button type="reset">Скинути конфігурацію</button>
+        </div>
+    </form>
+</section>
 </main>
 
 <footer>
