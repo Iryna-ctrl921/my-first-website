@@ -1,0 +1,304 @@
+/* Обнулення відступів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Універсальний селектор для скидання відступів */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Налаштування тіла сторінки та центрування форми через Flexbox */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Стилізація картки форми */
+.form-container {
+    background-color: #ffffff; 
+    width: 100%;
+    max-width: 400px; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+/* Оформлення заголовка всередині контейнера */
+.form-container h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: #2c3e50; 
+}
+/* Відступ між групами полів */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Стилізація текстових полів та списків */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    font-family: inherit; 
+    transition: border-color 0.3s ease; 
+}
+/* Зміна кольору рамки при кліку (фокусі) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db; 
+    outline: none;
+}
+
+/* Стилізація кнопки та її hover-ефект */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+}
+
+.submit-btn:hover {
+    background-color: #2980b9; 
+}
+
+/* Навігаційна панель */
+.main-nav {
+    background-color: #2c3e50; /* Темний фон */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main-nav ul {
+    display: flex;            /* Розташування в рядок */
+    flex-wrap: wrap;          /* Перенос на новий рядок, якщо не влазить */
+    list-style: none;         /* Прибираємо крапки */
+    padding: 0;
+    margin: 0;
+    justify-content: center;  /* Центруємо меню */
+}
+
+.main-nav li {
+    margin: 0; 
+}
+
+.main-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;    /* Прибираємо підкреслення */
+    padding: 15px 20px;       /* Внутрішні відступи (розділяють слова) */
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+/* Ефект при наведенні курсору */
+.main-nav a:hover {
+    background-color: #3498db; /* Блакитне підсвічування */
+}
+/* Навігація */
+.main-nav {
+    width: 100%;
+    background-color: #2c3e50;
+    position: absolute; /* Щоб меню було в самому верху сторінки */
+    top: 0;
+    left: 0;
+}
+
+.main-nav ul {
+    display: flex;            /* Розташування в рядок */
+    justify-content: center;  /* Центрування пунктів */
+    list-style: none;         /* Прибираємо маркери-крапки */
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;    /* Прибираємо підкреслення */
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #3498db; /* Блакитний колір при наведенні */
+}
+body {
+    padding-top: 70px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Базові стилі для всіх сповіщень */
+.alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;       /* Внутрішні відступи */
+    margin-bottom: 15px;      /* Відступ між блоками */
+    border-radius: 4px;       /* Легке закруглення кутів */
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+/* Специфічні кольори для кожного типу */
+.alert-success {
+    background-color: #d4edda; /* Світло-зелений */
+    color: #155724;
+    border-left: 5px solid #28a745; /* Специфічний лівий бордер */
+}
+
+.alert-warning {
+    background-color: #fff3cd; /* Жовтий */
+    color: #856404;
+    border-left: 5px solid #ffc107;
+}
+
+.alert-error {
+    background-color: #f8d7da; /* Світло-червоний */
+    color: #721c24;
+    border-left: 5px solid #dc3545;
+}
+
+/* Стилізація кнопки закриття 'х' */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: inherit;           /* Наслідує колір тексту сповіщення */
+    padding: 0 5px;
+    margin-left: 10px;
+    transition: 0.3s ease;    /* Плавна зміна */
+}
+
+/* Ефект наведення на кнопку закриття */
+.close-btn:hover {
+    color: #000;              /* Зміна кольору на чорний при наведенні */
+    transform: scale(1.2);    /* Легке збільшення для акценту */
+}
+/* Стилі для Завдання 9 */
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.team-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    /* Легка тінь для об'єму */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;     /* Робимо фото круглим */
+    object-fit: cover;      /* Щоб фото не розтягувалося */
+    border: 3px solid #2c3e50;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #3498db;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+/* Зміна кольору соцмереж при наведенні */
+.social-icon:hover {
+    color: #e74c3c;
+}

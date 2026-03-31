@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Головна сторінка</title>
 </head>
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="pages/about.html">Про кафедру</a></li>
-                <li><a href="pages/contacts.html">Контакти</a></li>
-                <li><a href="pages/services.html">Послуги</a></li>
-                <li><a href="pages/blog.html">Блог</a></li>
-                <li><a href="pages/gallery.html">Галерея</a></li>
-                <li><a href="pages/docs.html">Документація</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="main-nav"> <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="pages/about.html">Про кафедру</a></li>
+            <li><a href="pages/contacts.html">Контакти</a></li>
+            <li><a href="pages/services.html">Послуги</a></li>
+            <li><a href="pages/blog.html">Блог</a></li>
+            <li><a href="pages/gallery.html">Галерея</a></li>
+            <li><a href="pages/docs.html">Документація</a></li>
+            <li><a href="pages/login.html">Авторизація</a></li>
+            <li><a href="pages/profile.html">Редагування профілю</a></li>
+        </ul>
+    </nav> 
 
     <main>
         <section class="hero">
@@ -256,65 +255,65 @@
         </tbody>
     </table>
 </section>
-<section class="registration-section">
-    <h2>Реєстрація студента</h2>
-    
-    <form action="/register" method="POST">
-        <fieldset>
-    <legend>Персональні дані</legend>
+v<section class="registration-section">
+    <div class="form-container"> <h2>Реєстрація студента</h2>
+        
+        <form action="/register" method="POST">
+            <fieldset>
+                <legend>Персональні дані</legend>
+                <div class="form-group">
+                    <label for="lastname">Прізвище:</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Введіть прізвище" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" placeholder="example@nure.ua" required>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Пароль:</label>
+                    <input type="password" id="pwd" name="pwd" minlength="8" required>
+                </div>
+            </fieldset>
 
-    <div>
-        <label for="lastname">Прізвище:</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Введіть прізвище" required>
-    </div>
+            <fieldset>
+                <legend>Інформація про навчання</legend>
+                <div class="form-group">
+                    <label for="dob">Дата народження:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label>Стать:</label>
+                    <input type="radio" id="gender_m" name="gender" value="male" required>
+                    <label for="gender_m" style="display: inline;">Чоловіча</label>
+                    <input type="radio" id="gender_f" name="gender" value="female">
+                    <label for="gender_f" style="display: inline;">Жіноча</label>
+                </div>
+                <div class="form-group">
+                    <label for="faculty">Факультет:</label>
+                    <select id="faculty" name="faculty" required>
+                        <option value="">-- Оберіть факультет --</option>
+                        <option value="kn">Комп'ютерні науки</option>
+                        <option value="ipz">Інженерія програмного забезпечення</option>
+                    </select>
+                </div>
+            </fieldset>
 
-    <div>
-        <label for="email">Електронна пошта:</label>
-        <input type="email" id="email" name="email" placeholder="example@nure.ua" required>
-    </div>
+            <div class="form-group">
+                <label for="bio">Додаткова інформація:</label><br>
+                <textarea id="bio" name="bio" rows="4" style="width: 100%;"></textarea>
+            </div>
 
-    <div>
-        <label for="pwd">Пароль (мінімум 8 символів):</label>
-        <input type="password" id="pwd" name="pwd" minlength="8" required>
-    </div>
-    <div>
-    <label for="dob">Дата народження:</label>
-    <input type="date" id="dob" name="dob" required>
-</div>
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" style="display: inline;">Я даю згоду на обробку даних</label>
+            </div>
 
-<fieldset>
-    <legend>Стать:</legend>
-    <input type="radio" id="gender_m" name="gender" value="male" required>
-    <label for="gender_m">Чоловіча</label>
-    
-    <input type="radio" id="gender_f" name="gender" value="female">
-    <label for="gender_f">Жіноча</label>
-</fieldset>
-
-<div>
-    <label for="faculty">Факультет:</label>
-    <select id="faculty" name="faculty" required>
-        <option value="">-- Оберіть факультет --</option>
-        <option value="kn">Комп'ютерні науки</option>
-        <option value="ipz">Інженерія програмного забезпечення</option>
-        <option value="cit">Комп'ютерні інженерія та управління</option>
-    </select>
-</div>
-<div>
-    <label for="bio">Додаткова інформація:</label><br>
-    <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Розкажіть про свої очікування від навчання..."></textarea>
-</div>
-
-<div>
-    <input type="checkbox" id="terms" name="terms" required>
-    <label for="terms">Я даю згоду на обробку персональних даних</label>
-</div>
-<div>
-    <button type="submit">Зареєструватися</button>
-    <button type="reset">Очистити форму</button>
-</div>
-</fieldset>
+            <div class="form-actions">
+                <button type="submit">Зареєструватися</button>
+                <button type="reset" style="background-color: #6c757d;">Очистити</button>
+            </div>
         </form>
+    </div>
 </section>
 
         <section class="gallery">
