@@ -1,0 +1,234 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+.header {
+    position: fixed;      
+    top: 0; 
+    left: 0;
+    width: 100%;          
+    height: 70px;         
+    background-color: #fff; 
+    display: flex;        
+    justify-content: space-between; 
+    align-items: center;  
+    padding: 0 30px;      
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    z-index: 100;         
+}
+/* Контейнер, що об'єднує сайдбар та контент */
+.main-container {
+    display: flex;           
+    margin-top: 70px;         
+    min-height: calc(100vh - 70px); 
+}
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+/* Бічна панель (Sidebar) */
+.sidebar {
+    width: 250px;            
+    background-color: #2c3e50; 
+    color: rgb(255, 254, 254);
+    position: sticky;         
+    top: 70px;                
+    height: calc(100vh - 70px); 
+    padding: 20px;
+}
+.sidebar a {
+    color: white;            
+    text-decoration: none;   
+    display: block;          
+    padding: 10px 5px;      
+    transition: 0.3s;        
+}
+
+/* Основна частина з контентом */
+.content {
+    flex-grow: 1;            
+    padding: 30px;
+    background-color: #f4f7f6; 
+}
+.grid-gallery {
+    display: grid;                                 
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); 
+    gap: 25px;                                    
+}
+/* Основний контейнер картки */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;         
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+    overflow: hidden;               
+}
+
+/* Тіло картки з текстом */
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;         
+    flex-grow: 1;                   
+}
+
+/* Текстовий опис */
+.card-body p {
+    flex-grow: 1;                   
+    margin-bottom: 15px;
+}
+/* Зовнішній контейнер для планів */
+.pricing-container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap; 
+}
+
+/* Сама картка як Flex-контейнер */
+.pricing-card {
+    background: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between; 
+    text-align: center;
+    border: 1px solid #eee;
+}
+/* Стилі тексту */
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+.pricing-card li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+/* Кнопка внизу */
+.pricing-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pricing-btn:hover {
+    background-color: #2980b9;
+}
+.weather-widget {
+    display: grid;
+    /* Ліва колонка вдвічі більша (2fr), права — мінімум 120px (1fr) */
+    grid-template-columns: 2fr minmax(120px, 1fr);
+    /* Два рядки однакової висоти */
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 15px;
+    background: #30a5f3; 
+    color: white; 
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 450px;
+    margin-top: 30px;
+    overflow: hidden; 
+    margin: 30px auto;
+}
+
+/* Ліва частина з температурою займає 2 рядки */
+.temp-main {
+    grid-row: 1 / 3; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(255,255,255,0.2); 
+    margin: 0;
+}
+
+/* Колір і розмір температури */
+.degree {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Текст під температурою */
+.temp-main p {
+    font-size: 0.9rem;
+    color: white;
+    opacity: 0.8;
+}
+
+/* Права частина: показники вітру та вологості */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.weather-info .value {
+    font-weight: bold;
+    color: white;
+}
+.calendar-container {
+    display: grid;
+    /* Створюємо 7 рівних колонок (дні тижня) */
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 700px;
+    margin: 30px auto; 
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.day-name {
+    font-weight: bold;
+    color: #3498db;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.day {
+    padding: 15px;
+    background: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.day:hover {
+    background: #3498db;
+    color: white;
+}
+
+.first-day {
+    grid-column-start: 3;
+}
